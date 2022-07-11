@@ -10,3 +10,4 @@ https://github.com/maponti/imageprocessing_course_icmc/blob/master/05b_restorati
 
 
 https://imagej.net/plugins/parallel-iterative-deconvolution
+https://towardsdatascience.com/regularized-linear-regression-models-44572e79a1b5
