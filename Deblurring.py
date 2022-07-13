@@ -137,7 +137,13 @@ deblurred_tikhonov = tikhonov(B, Ar, Ac, 0.002)
 
 cv.imshow("deblurred_wiener", normalize_uint8(deblurred_wiener))
 cv.imshow("deblurred_inverse", normalize_uint8(deblurred_inverse))
-cv.imshow("deblurred_tikhonov", deblurred_tikhonov)
+cv.imshow("deblurred_tikhonov", normalize_uint8(deblurred_tikhonov))
+
+cv.imwrite("blurred.png", normalize_uint8(B))
+cv.imwrite("deblurred_wiener.png", normalize_uint8(deblurred_wiener))
+cv.imwrite("deblurred_inverse.png", normalize_uint8(deblurred_inverse))
+cv.imwrite("deblurred_tikhonov.png", normalize_uint8(deblurred_tikhonov))
+cv.imwrite("psf.png", normalize_uint8(psf))
 
 cv.waitKey(0)
 cv.destroyAllWindows()
