@@ -1,0 +1,623 @@
+/* SCSS HEX */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.inside-container {
+  margin: 7vh 8vw 0 7vw;
+  position: relative;
+  height: 85vh;
+}
+
+.hello {
+  font-weight: 800;
+  font-size: 4.4vw;
+  cursor: default;
+  color: #e15554;
+  text-align: left;
+  margin-left: -0.3vw;
+  text-shadow: 0 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+}
+
+.adam {
+  font-weight: 800;
+  color: #e15554;
+  font-size: 1vw;
+  cursor: default;
+  margin: -1 0 0 0;
+  text-shadow: 0 0.2vw 0.2vw rgba(0, 0, 0, 0.25);
+}
+
+.greeting {
+  font-size: 1.5vw;
+  color: #ffffff;
+  position: absolute;
+  top: 35%;
+  font-weight: 300;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.child {
+  scroll-snap-align: start;
+}
+
+#container {
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+  background-color: #ffffff;
+  scroll-snap-type: y mandatory;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-behavior: smooth;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 10vh 65vh 25vh 25vh 50vh 25vh 25vh 50vh 25vh 25vh 60vh 15vh;
+  grid-template-areas: "header header" "home-1 home-image" "home-1 sudoku-1" "home-2 sudoku-2" "sudoku-image sudoku-2" "clock-1 sudoku-2" "clock-2 sudoku-3" "clock-2 clock-image" "clock-2 small-1" "clock-3 small-2" "small-image small-2" "footer footer";
+}
+
+.card {
+  background: #404040;
+}
+
+.image {
+  background-color: #ffffff;
+}
+
+#header {
+  grid-area: header;
+  scroll-margin-top: 0.5vw;
+  margin: 0.5vw 0.5vw 0.25vw 0.5vw;
+  border-radius: 0.8vw 0.8vw 0.8vw 0.8vw;
+  display: flex;
+  align-items: center;
+  cursor: default;
+}
+#header p {
+  font-size: 1.6vw;
+  font-weight: 800;
+  text-shadow: 0 0.2vw 0.2vw rgba(0, 0, 0, 0.25);
+}
+#header #first {
+  color: #e15554;
+  margin-left: 7vw;
+}
+#header #second {
+  color: #e1bc29;
+  margin-left: 26vw;
+}
+#header #third {
+  color: #449900;
+  margin-left: 7vw;
+}
+#header #fourth {
+  color: #4392f1;
+  margin-left: 7vw;
+}
+#header #fifth {
+  color: #933982;
+  margin-left: 7vw;
+}
+
+#home-1 {
+  grid-area: home-1;
+  margin: 0.25vw 0.25vw 0 0.5vw;
+  border-radius: 0.8vw 0.8vw 0 0;
+}
+#home-1 #github {
+  height: 2.4vw;
+  width: 20vw;
+  position: absolute;
+  top: 77%;
+  display: flex;
+  justify-content: left;
+  align-content: center;
+  margin: 8vh 0 0 0;
+}
+#home-1 #github img {
+  max-height: 2.4vw;
+}
+#home-1 #github p {
+  font-family: "Nunito", sans-serif;
+  font-size: 1vw;
+  color: #ffffff;
+  margin: 0 0 0 1vw;
+}
+#home-1 #github p span {
+  color: #e15554;
+}
+#home-1 #email {
+  height: 2.4vw;
+  width: 18vw;
+  position: absolute;
+  top: 77%;
+  display: flex;
+  justify-content: left;
+  align-content: center;
+  margin: 8vh 0 0 0;
+}
+#home-1 #email img {
+  max-height: 2.4vw;
+}
+#home-1 #email p {
+  font-family: "Nunito", sans-serif;
+  font-size: 1vw;
+  color: #ffffff;
+  margin: 0 0 0 1vw;
+}
+#home-1 #email p span {
+  color: #e15554;
+}
+
+#home-2 {
+  grid-area: home-2;
+  margin: 0 0.25vw 0.25vw 0.5vw;
+  border-radius: 0 0 0.8vw 0.8vw;
+}
+#home-2 a {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#home-2 a img {
+  height: 30%;
+  width: 30%;
+}
+
+#home-image {
+  grid-area: home-image;
+  margin: 0.25vw 0.5vw 0.25vw 0.25vw;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+#home-image img {
+  height: 100%;
+  width: 100%;
+}
+
+#sudoku-1 {
+  grid-area: sudoku-1;
+  margin: 0.25vw 0.5vw 0 0.25vw;
+  border-radius: 0.8vw 0.8vw 0 0;
+}
+#sudoku-1 a {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#sudoku-1 a img {
+  height: 30%;
+  width: 30%;
+}
+
+#sudoku {
+  grid-area: sudoku-2;
+  margin: 0 0.5vw 0 0.25vw;
+}
+#sudoku .inside-container {
+  position: relative;
+  height: 95vh;
+}
+#sudoku .inside-container #sudoku_head {
+  color: #e1bc29;
+  font-size: 4vw;
+  font-weight: 800;
+  position: absolute;
+  top: 8%;
+  cursor: default;
+  text-shadow: 0 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+}
+#sudoku .inside-container #sudoku_text {
+  font-size: 1.5vw;
+  color: #ffffff;
+  position: absolute;
+  top: 30%;
+  font-weight: 300;
+}
+#sudoku .inside-container .read {
+  height: 3vw;
+  width: 15vw;
+  background-color: #ffffff;
+  font-size: 1.5vw;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 0.6vw;
+  position: absolute;
+  top: 75%;
+}
+#sudoku .inside-container .play {
+  height: 3vw;
+  width: 12vw;
+  background-color: #ffffff;
+  font-size: 1.5vw;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 0.6vw;
+  position: absolute;
+  top: 75%;
+  left: 17vw;
+}
+
+#sudoku-3 {
+  grid-area: sudoku-3;
+  margin: 0 0.5vw 0.25vw 0.25vw;
+  border-radius: 0 0 0.8vw 0.8vw;
+}
+#sudoku-3 a {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#sudoku-3 a img {
+  height: 30%;
+  width: 30%;
+}
+
+#sudoku-image {
+  grid-area: sudoku-image;
+  margin: 0.25vw 0.25vw 0.25vw 0.5vw;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+#sudoku-image img {
+  height: 100%;
+  width: 100%;
+}
+
+#clock-1 {
+  grid-area: clock-1;
+  margin: 0.25vw 0.25vw 0 0.5vw;
+  border-radius: 0.8vw 0.8vw 0 0;
+}
+#clock-1 a {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#clock-1 a img {
+  height: 30%;
+  width: 30%;
+}
+
+#clock {
+  grid-area: clock-2;
+  margin: 0 0.25vw 0 0.5vw;
+}
+#clock .inside-container {
+  position: relative;
+  height: 95vh;
+}
+#clock .inside-container #clock_head {
+  color: #449900;
+  font-size: 4vw;
+  font-weight: 800;
+  position: absolute;
+  top: 8%;
+  cursor: default;
+  text-shadow: 0 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+}
+#clock .inside-container #clock_text {
+  font-size: 1.5vw;
+  color: #ffffff;
+  position: absolute;
+  top: 30%;
+  font-weight: 300;
+}
+#clock .inside-container .read {
+  height: 3vw;
+  width: 15vw;
+  background-color: #ffffff;
+  font-size: 1.5vw;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 0.6vw;
+  position: absolute;
+  top: 75%;
+}
+
+#clock-3 {
+  grid-area: clock-3;
+  margin: 0 0.25vw 0.25vw 0.5vw;
+  border-radius: 0 0 0.8vw 0.8vw;
+}
+#clock-3 a {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#clock-3 a img {
+  height: 30%;
+  width: 30%;
+}
+
+#clock-image {
+  grid-area: clock-image;
+  margin: 0.25vw 0.5vw 0.25vw 0.25vw;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+#clock-image img {
+  height: 100%;
+  width: 100%;
+}
+
+#small-1 {
+  grid-area: small-1;
+  margin: 0.25vw 0.5vw 0 0.25vw;
+  border-radius: 0.8vw 0.8vw 0 0;
+}
+#small-1 a {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#small-1 a img {
+  height: 30%;
+  width: 30%;
+}
+
+#small {
+  grid-area: small-2;
+  margin: 0 0.5vw 0.25vw 0.25vw;
+  border-radius: 0 0 0.8vw 0.8vw;
+}
+#small .inside-container {
+  position: relative;
+  height: 80vh;
+}
+#small .inside-container #small_head {
+  color: #4392f1;
+  font-size: 4vw;
+  font-weight: 800;
+  position: absolute;
+  top: 9%;
+  cursor: default;
+  text-shadow: 0 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+}
+#small .inside-container #small_text {
+  font-size: 1.5vw;
+  color: #ffffff;
+  position: absolute;
+  top: 31%;
+  font-weight: 300;
+}
+#small .inside-container .read {
+  height: 3vw;
+  width: 15vw;
+  background-color: #ffffff;
+  font-size: 1.5vw;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 0.6vw;
+  position: absolute;
+  top: 75%;
+}
+
+#small-image {
+  grid-area: small-image;
+  margin: 0.25vw 0.25vw 0.25vw 0.5vw;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+#small-image img {
+  height: 100%;
+  width: 100%;
+}
+
+#footer {
+  grid-area: footer;
+  margin: 0.25vw 0.5vw 0.5vw 0.5vw;
+  border-radius: 0.8vw 0.8vw 0.8vw 0.8vw;
+}
+
+[data-scroll] {
+  transition: opacity 0.7s;
+}
+
+[data-scroll=in] {
+  opacity: 1;
+}
+
+[data-scroll=out] {
+  opacity: 0;
+}
+
+#container::-webkit-scrollbar {
+  display: none;
+}
+
+#container {
+  -ms-overflow-style: none;
+}
+
+#container {
+  scrollbar-width: none;
+}
+
+@media (orientation: portrait) {
+  #container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10vh 65vh 25vh 25vh 50vh 25vh 25vh 50vh 25vh 25vh 60vh 15vh;
+    grid-template-areas: "header" "home-1" "home-1" "sudoku-2" "sudoku-2" "sudoku-2" "clock-2" "clock-2" "clock-2" "small-2" "small-2" "footer";
+  }
+  #container #header {
+    margin: 1vw 1vw 0.5vw 1vw;
+    border-radius: 2vw;
+  }
+  #container #home-1 {
+    margin: 1vw;
+    border-radius: 2vw;
+  }
+  #container #home-image {
+    display: none;
+  }
+  #container #home-2 {
+    display: none;
+  }
+  #container #sudoku-1 {
+    display: none;
+  }
+  #container #sudoku {
+    margin: 1vw;
+    border-radius: 2vw;
+  }
+  #container #sudoku-image {
+    display: none;
+  }
+  #container #sudoku-3 {
+    display: none;
+  }
+  #container #clock-1 {
+    display: none;
+  }
+  #container #clock {
+    margin: 1vw;
+    border-radius: 2vw;
+  }
+  #container #clock-image {
+    display: none;
+  }
+  #container #clock-3 {
+    display: none;
+  }
+  #container #small-1 {
+    display: none;
+  }
+  #container #small {
+    margin: 1vw;
+    border-radius: 2vw;
+  }
+  #container #small-image {
+    display: none;
+  }
+  #container #footer {
+    margin: 0.5vw 1vw 1vw 1vw;
+    border-radius: 2vw;
+  }
+  #header p {
+    font-size: 4.5vw;
+    text-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
+  }
+  #header #first {
+    display: none;
+  }
+  #header #second {
+    margin-left: 7vw;
+  }
+  #header #third {
+    margin-left: 7vw;
+  }
+  #header #fourth {
+    margin-left: 7vw;
+  }
+  #home-1 .hello {
+    font-size: 20vw;
+    margin-left: -1vw;
+    text-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
+  }
+  #home-1 .adam {
+    font-size: 3.5vw;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+  }
+  #home-1 .greeting {
+    top: 30%;
+    font-size: 4.5vw;
+  }
+  #home-1 #github {
+    height: 9vw;
+    width: 70vw;
+  }
+  #home-1 #github img {
+    max-height: 9vw;
+  }
+  #home-1 #github p {
+    font-size: 3.5vw;
+  }
+  #home-1 #email {
+    height: 9vw;
+    width: 70vw;
+  }
+  #home-1 #email img {
+    max-height: 9vw;
+  }
+  #home-1 #email p {
+    font-size: 3.5vw;
+  }
+  #sudoku .inside-container #sudoku_head {
+    font-size: 12vw;
+  }
+  #sudoku .inside-container #sudoku_text {
+    font-size: 4.5vw;
+  }
+  #sudoku .inside-container .read {
+    width: 32vw;
+    height: 10vw;
+    font-size: 4vw;
+    font-weight: 600;
+    border-radius: 2vw;
+  }
+  #sudoku .inside-container .play {
+    width: 32vw;
+    height: 10vw;
+    font-size: 4vw;
+    font-weight: 600;
+    border-radius: 2vw;
+    left: 40vw;
+  }
+  #clock .inside-container #clock_head {
+    font-size: 12vw;
+  }
+  #clock .inside-container #clock_text {
+    font-size: 4.5vw;
+  }
+  #clock .inside-container .read {
+    width: 45vw;
+    height: 10vw;
+    font-size: 4vw;
+    font-weight: 600;
+    border-radius: 2vw;
+  }
+  #small .inside-container #small_head {
+    font-size: 12vw;
+  }
+  #small .inside-container #small_text {
+    font-size: 4.5vw;
+  }
+  #small .inside-container .read {
+    width: 45vw;
+    height: 10vw;
+    font-size: 4vw;
+    font-weight: 600;
+    border-radius: 2vw;
+  }
+}/*# sourceMappingURL=main.css.map */

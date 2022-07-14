@@ -1,7 +1,6 @@
 import cv2 as cv
 import numpy as np
 import scipy.io as sc
-import matplotlib.pyplot as plt
 
 
 def normalize_uint8(img):

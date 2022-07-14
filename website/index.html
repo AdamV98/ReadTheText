@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div class="card child animate__animated animate__slideInDown" id="header">
+            <p id="first">home page</p>
+            <a id="second" href="#sudoku"><p>first step</p></a>
+            <a id="third" href="#clock"><p>second step</p></a>
+            <a id="fourth" href="#small"><p>third step</p></a>
+            <a id="fifth" href="#post"><p>fourth step</p></a>
+        </div>
+        <div class="card animate__animated animate__slideInLeft" id="home-1">
+            <div class="inside-container">
+                <p class="hello">Read The Text!</p>
+                <p class="adam">Elisabeth Knipschildt, Ghada Laribi, Ricardo Carreon, Adam Varga</p>
+                <p class="greeting">The goal of this project it to deblur an image to
+                    an extent, where the text in the image conceiled by blurring and noise can be read.</p>
+                <div id="github">
+                    <img src="pictures/github.svg" alt="GitHub logo">
+                    <p>Visit the GitHub page of the project <a href="https://github.com/AdamV98/ReadTheText"><span>@AdamV98/ReadTheText</span></a></p>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card" id="home-2">
+            <a href="#header"><img src="pictures/arrow_yellow_up.svg"></a>
+        </div>
+        <div data-scroll class="image animate__animated animate__slideInRight" id="home-image">
+            <img src="" alt="man leaning on table with a computer on it">
+        </div>
+        <div class="card animate__animated animate__slideInRight" id="sudoku-1">
+            <a href="#sudoku"><img src="pictures/arrow_red_down.svg"></a>
+        </div>
+        <div class="card child" id="sudoku">
+            <div class="inside-container">
+                <p id="sudoku_head">Inverse filter</p>
+                <p id="sudoku_text">In order to recover a sharp image from the observed blurred one, several
+                    methods were tackled in literature. We start with basic naive inverse filter by first assuming
+                    that the noise can be neglected thus the blur model is reduced to f = g * h.
+                </p>
+                <button class="read"onclick="window.location.href='sudoku.html';">Read More</button>
+            </div>
+        </div>
+        <div class="card" id="sudoku-3">
+            <a href="#sudoku"><img src="pictures/arrow_green_up.svg"></a>
+        </div>
+        <div data-scroll class="image" id="sudoku-image">
+            <img src="" alt="sudoku board">
+        </div>
+        <div class="card" id="clock-1">
+            <a href="#clock"><img src="pictures/arrow_yellow_down.svg"></a>
+        </div>
+        <div class="card child" id="clock">
+            <div class="inside-container">
+                <p id="clock_head">Wiener filter</p>
+                <p id="clock_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Nulla rutrum nec leo eget dignissim. Nulla facilisi. Donec non metus in urna consectetur
+                    feugiat et et dolor.
+                </p>
+                <button class="read"onclick="window.location.href='clock.html';">Read More</button>
+            </div>
+        </div>
+        <div class="card" id="clock-3">
+            <a href="#clock"><img src="pictures/arrow_blue_up.svg"></a>
+        </div>
+        <div data-scroll class="image" id="clock-image">
+            <img src="" alt="clock">
+        </div>
+        <div class="card" id="small-1">
+            <a href="#small"><img src="pictures/arrow_green_down.svg"></a>
+        </div>
+        <div class="card child" id="small">
+            <div class="inside-container">
+                <p id="small_head">Tikhonov method</p>
+                <p id="small_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Nulla rutrum nec leo eget dignissim. Nulla facilisi. Donec non metus in urna consectetur
+                    feugiat et et dolor.
+                </p>
+                <button class="read"onclick="window.location.href='small_projects.html';">Read More</button>
+            </div>
+        </div>
+        <div data-scroll class="image" id="small-image">
+            <img src="" alt="man sitting in forest">
+        </div>
+        <div class="card" id="footer"></div>
+    </div>
+    <script>
+        ScrollOut({
+            scrollingElement: "#container"
+        });
+    </script>
+</body>
+</html>
