@@ -1,8 +1,12 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Jul 13 14:59:49 2022
+"""
+
 import cv2 as cv
 import numpy as np
 import scipy.io as sc
 import matplotlib.pyplot as plt
-
 
 def normalize_uint8(img):
     """
@@ -193,35 +197,42 @@ def postprocess(image):
 
     return image
 
-# reading the matrices from the Matlab file
-data = sc.loadmat("matrices.mat")
-Ar = data.get("Ar")
-Ac = data.get("Ac")
-B = data.get("B")
 
-psf = create_psf(B, Ar, Ac)
+def compare_2_imgs (img1, img2, title1 = 'Image 1', title2 = 'Image2', size = (15,15), title_size = 15, cmap = 'gray'):
+     
+    # create figure
+    fig = plt.figure(figsize=size)
+      
+    # setting values to rows and column variables
+    rows = 1
+    columns = 2
+      
+    # Adds a subplot at the 1st position
+    fig.add_subplot(rows, columns, 1)
+      
+    # showing image
+    plt.imshow(img1, cmap = cmap)
+    plt.axis('off')
+    plt.title(title1, fontsize = title_size)
+      
+    # Adds a subplot at the 2nd position
+    fig.add_subplot(rows, columns, 2)
+      
+    # showing image
+    plt.imshow(img2, cmap = cmap)
+    plt.axis('off')
+    plt.title(title2, fontsize = title_size)
 
-cv.imshow("point spread function", normalize_uint8(psf))
-cv.imshow("blurred image", B)
 
-deblurred_wiener = wiener_filter(B, psf, 20000)
-deblurred_inverse = inverse_filter(B, psf)
-deblurred_tikhonov = tikhonov(B, Ar, Ac, 0.002)
+    
+    
 
-deblurred_tikhonov = normalize_uint8(deblurred_tikhonov)
 
-deblurred_tikhonov = postprocess(deblurred_tikhonov)
 
-cv.imshow("deblurred_wiener", normalize_uint8(deblurred_wiener))
-cv.imshow("deblurred_inverse", normalize_uint8(deblurred_inverse))
-cv.imshow("deblurred_tikhonov", deblurred_tikhonov)
-#cv.imshow("deblurred_tikhonov_thinned", deblurred_tikhonov_thinned)
 
-cv.imwrite("blurred.png", normalize_uint8(B))
-cv.imwrite("deblurred_wiener.png", normalize_uint8(deblurred_wiener))
-cv.imwrite("deblurred_inverse.png", normalize_uint8(deblurred_inverse))
-cv.imwrite("deblurred_tikhonov.png", deblurred_tikhonov)
-cv.imwrite("psf.png", normalize_uint8(psf))
 
-cv.waitKey(0)
-cv.destroyAllWindows()
+
+
+
+
+
