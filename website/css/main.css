@@ -188,7 +188,9 @@ html {
 }
 #home-image img {
   height: 100%;
-  width: 100%;
+  width: auto;
+  margin: auto;
+  border-radius: 0.8vw 0.8vw 0.8vw 0.8vw;
 }
 
 #sudoku-1 {
@@ -282,7 +284,9 @@ html {
 }
 #sudoku-image img {
   height: 100%;
-  width: 100%;
+  width: auto;
+  margin: auto;
+  border-radius: 0.8vw 0.8vw 0.8vw 0.8vw;
 }
 
 #clock-1 {
@@ -364,7 +368,9 @@ html {
 }
 #clock-image img {
   height: 100%;
-  width: 100%;
+  width: auto;
+  margin: auto;
+  border-radius: 0.8vw 0.8vw 0.8vw 0.8vw;
 }
 
 #small-1 {
