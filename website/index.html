@@ -48,7 +48,6 @@
                     methods were tackled in literature. We start with basic naive inverse filter by first assuming
                     that the noise can be neglected thus the blur model is reduced to f = g * h.
                 </p>
-                <button class="read"onclick="window.location.href=">Read More</button>
             </div>
         </div>
         <div class="card" id="inverse-3">
@@ -67,7 +66,6 @@
                     The Wiener filter displays better stability than the inverse filtering.
                     It has properties of a band-pass and is therefore even well-suited to deal with moderate noise.
                 </p>
-                <button class="read"onclick="window.location.href=">Read More</button>
             </div>
         </div>
         <div class="card" id="wiener-3">
@@ -87,9 +85,8 @@
                 <p id="tikhonov_text">In 1963 Tikhonov proposed a more general variational method.
                     The proposed method uses energy minimization to reduce the amount of noise in the image.
                     Using this method, the edges were sharpened due to the use of the regularization function.
-                    Both the quote and the author’s name is clearer.
+                    Both the quote and the author’s name are clearer.
                 </p>
-                <button class="read"onclick="window.location.href=">Read More</button>
             </div>
         </div>
         <div class="card" id="tikhonov-3">
@@ -106,12 +103,11 @@
         <div class="card child" id="post">
             <div class="inside-container">
                 <p id="post_head">Post-processing</p>
-                <p id="post_text">Post-processing was utilized in the resulting image after appliying the Tikhonov method.
-                    This step is expected to enhance the filtered image. A sharpening filter was applied, and then
+                <p id="post_text">Post-processing was utilized on the resulting image after appliying the Tikhonov method.
+                    This step is expected to enhance the filtered image. First, a sharpening filter was applied, then
                     thresholding to reduce the background noise, and the last step was the usage of the contrast
                     limited adaptive histogram equalization.
                 </p>
-                <button class="read"onclick="window.location.href=">Read More</button>
             </div>
         </div>
         <div data-scroll class="image" id="post-image">
