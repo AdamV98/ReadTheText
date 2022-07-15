@@ -76,19 +76,22 @@ html {
     scroll-behavior: smooth;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 10vh 65vh 25vh 25vh 50vh 25vh 25vh 50vh 25vh 25vh 60vh 15vh;
+    grid-template-rows: 10vh 65vh 25vh 25vh 50vh 25vh 25vh 50vh 25vh 25vh 50vh 25vh 25vh 60vh 15vh;
     grid-template-areas:
         "header header"
         "home-1 home-image"
-        "home-1 sudoku-1"
-        "home-2 sudoku-2"
-        "sudoku-image sudoku-2"
-        "clock-1 sudoku-2"
-        "clock-2 sudoku-3"
-        "clock-2 clock-image"
-        "clock-2 small-1"
-        "clock-3 small-2"
-        "small-image small-2"
+        "home-1 inverse-1"
+        "home-2 inverse-2"
+        "inverse-image inverse-2"
+        "wiener-1 inverse-2"
+        "wiener-2 inverse-3"
+        "wiener-2 wiener-image"
+        "wiener-2 tikhonov-1"
+        "wiener-3 tikhonov-2"
+        "tikhonov-image tikhonov-2"
+        "post-1 tikhonov-2"
+        "post-2 tikhonov-3"
+        "post-2 post-image"
         "footer footer";
 }
 .card {
@@ -213,8 +216,8 @@ html {
     }
 }
 
-#sudoku-1 {
-    grid-area: sudoku-1;
+#inverse-1 {
+    grid-area: inverse-1;
     margin: 0.25vw 0.5vw 0 0.25vw;
     border-radius: 0.8vw 0.8vw 0 0;
     a {
@@ -230,13 +233,13 @@ html {
     }
 }
 
-#sudoku {
-    grid-area: sudoku-2;
+#inverse {
+    grid-area: inverse-2;
     margin: 0 0.5vw 0 0.25vw;
     .inside-container {
         position: relative;
         height: 95vh;
-        #sudoku_head {
+        #inverse_head {
             color: $saffron;
             font-size: 4vw;
             font-weight: 800;
@@ -245,7 +248,7 @@ html {
             cursor: default;
             text-shadow: 0 0.3vw 0.3vw rgba($color: #000000, $alpha: 0.25);
         }
-        #sudoku_text {
+        #inverse_text {
             font-size: 1.5vw;
             color: $white;
             //margin-top: 15vh;
@@ -288,8 +291,8 @@ html {
     }
 }
 
-#sudoku-3 {
-    grid-area: sudoku-3;
+#inverse-3 {
+    grid-area: inverse-3;
     margin: 0 0.5vw 0.25vw 0.25vw;
     border-radius: 0 0 0.8vw 0.8vw;
     a {
@@ -305,8 +308,8 @@ html {
     }
 }
 
-#sudoku-image {
-    grid-area: sudoku-image;
+#inverse-image {
+    grid-area: inverse-image;
     margin: 0.25vw 0.25vw 0.25vw 0.5vw;
     display: flex;
     justify-items: center;
@@ -319,8 +322,8 @@ html {
     }
 }
 
-#clock-1 {
-    grid-area: clock-1;
+#wiener-1 {
+    grid-area: wiener-1;
     margin: 0.25vw 0.25vw 0 0.5vw;
     border-radius: 0.8vw 0.8vw 0 0;
     a {
@@ -336,13 +339,13 @@ html {
     }
 }
 
-#clock {
-    grid-area: clock-2;
+#wiener {
+    grid-area: wiener-2;
     margin: 0 0.25vw 0 0.5vw;
     .inside-container {
         position: relative;
         height: 95vh;
-        #clock_head {
+        #wiener_head {
             color: $slimy-green;
             font-size: 4vw;
             font-weight: 800;
@@ -351,7 +354,7 @@ html {
             cursor: default;
             text-shadow: 0 0.3vw 0.3vw rgba($color: #000000, $alpha: 0.25);
         }
-        #clock_text {
+        #wiener_text {
             font-size: 1.5vw;
             color: $white;
             //margin-top: 15vh;
@@ -378,8 +381,8 @@ html {
     }
 }
 
-#clock-3 {
-    grid-area: clock-3;
+#wiener-3 {
+    grid-area: wiener-3;
     margin: 0 0.25vw 0.25vw 0.5vw;
     border-radius: 0 0 0.8vw 0.8vw;
     a {
@@ -395,8 +398,8 @@ html {
     }
 }
 
-#clock-image {
-    grid-area: clock-image;
+#wiener-image {
+    grid-area: wiener-image;
     margin: 0.25vw 0.5vw 0.25vw 0.25vw;
     display: flex;
     justify-items: center;
@@ -409,8 +412,8 @@ html {
     }
 }
 
-#small-1 {
-    grid-area: small-1;
+#tikhonov-1 {
+    grid-area: tikhonov-1;
     margin: 0.25vw 0.5vw 0 0.25vw;
     border-radius: 0.8vw 0.8vw 0 0;
     a {
@@ -426,15 +429,121 @@ html {
     }
 }
 
-#small {
-    grid-area: small-2;
+#tikhonov {
+    grid-area: tikhonov-2;
+    margin: 0 0.5vw 0 0.25vw;
+    .inside-container {
+        position: relative;
+        height: 95vh;
+        #tikhonov_head {
+            color: $dodger-blue;
+            font-size: 4vw;
+            font-weight: 800;
+            position: absolute;
+            top: 8%;
+            cursor: default;
+            text-shadow: 0 0.3vw 0.3vw rgba($color: #000000, $alpha: 0.25);
+        }
+        #tikhonov_text {
+            font-size: 1.5vw;
+            color: $white;
+            //margin-top: 15vh;
+            position: absolute;
+            top: 30%;
+            font-weight: 300;
+        }
+
+        .read {
+            height: 3vw;
+            width: 15vw;
+            background-color: $white;
+            //margin: 20vh 0 0 0;
+            //display: flex;
+            //justify-content: center;
+            //align-items: center;
+            font-size: 1.5vw;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 0.6vw;
+            position: absolute;
+            top: 75%;
+        }
+        .play {
+            height: 3vw;
+            width: 12vw;
+            background-color: $white;
+            //margin: 20vh 0 0 0;
+            //display: flex;
+            //justify-content: center;
+            //align-items: center;
+            font-size: 1.5vw;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 0.6vw;
+            position: absolute;
+            top: 75%;
+            left: 17vw;
+        }
+    }
+}
+
+#tikhonov-3 {
+    grid-area: tikhonov-3;
+    margin: 0 0.5vw 0.25vw 0.25vw;
+    border-radius: 0 0 0.8vw 0.8vw;
+    a {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            height: 30%;
+            width: 30%;
+        }
+    }
+}
+
+#tikhonov-image {
+    grid-area: tikhonov-image;
+    margin: 0.25vw 0.25vw 0.25vw 0.5vw;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    img {
+        height: 100%;
+        width: auto;
+        margin: auto;
+        border-radius: 0.8vw 0.8vw 0.8vw 0.8vw;
+    }
+}
+
+#post-1 {
+    grid-area: post-1;
+    margin: 0.25vw 0.5vw 0 0.25vw;
+    border-radius: 0.8vw 0.8vw 0 0;
+    a {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            height: 30%;
+            width: 30%;
+        }
+    }
+}
+
+#post {
+    grid-area: post-2;
     margin: 0 0.5vw 0.25vw 0.25vw;
     border-radius: 0 0 0.8vw 0.8vw;
     .inside-container {
         position: relative;
         height: 80vh;
-        #small_head {
-            color: $dodger-blue;
+        #post_head {
+            color: $byzantium;
             font-size: 4vw;
             font-weight: 800;
             position: absolute;
@@ -442,7 +551,7 @@ html {
             cursor: default;
             text-shadow: 0 0.3vw 0.3vw rgba($color: #000000, $alpha: 0.25);
         }
-        #small_text {
+        #post_text {
             font-size: 1.5vw;
             color: $white;
             //margin-top: 15vh;
@@ -469,15 +578,17 @@ html {
     }
 }
 
-#small-image {
-    grid-area: small-image;
+#post-image {
+    grid-area: post-image;
     margin: 0.25vw 0.25vw 0.25vw 0.5vw;
     display: flex;
     justify-items: center;
     align-items: center;
     img {
         height: 100%;
-        width: 100%;
+        width: auto;
+        margin: auto;
+        border-radius: 0.8vw 0.8vw 0.8vw 0.8vw;
     }
 }
 
@@ -485,10 +596,21 @@ html {
     grid-area: footer;
     margin: 0.25vw 0.5vw 0.5vw 0.5vw;
     border-radius: 0.8vw 0.8vw 0.8vw 0.8vw;
+    a {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            height: 50%;
+            width: 50%;
+        }
+    }
 }
 
 [data-scroll] {
-    transition: opacity 0.7s;
+    transition: opacity 1s;
 }
 
 [data-scroll="in"] {
@@ -517,14 +639,14 @@ html {
             "header"
             "home-1"
             "home-1"
-            "sudoku-2"
-            "sudoku-2"
-            "sudoku-2"
-            "clock-2"
-            "clock-2"
-            "clock-2"
-            "small-2"
-            "small-2"
+            "inverse-2"
+            "inverse-2"
+            "inverse-2"
+            "wiener-2"
+            "wiener-2"
+            "wiener-2"
+            "post-2"
+            "post-2"
             "footer";
 
         #header {
@@ -541,40 +663,40 @@ html {
         #home-2 {
             display: none;
         }
-        #sudoku-1 {
+        #inverse-1 {
             display: none;
         }
-        #sudoku {
+        #inverse {
             margin: 1vw;
             border-radius: 2vw;
         }
-        #sudoku-image {
+        #inverse-image {
             display: none;
         }
-        #sudoku-3 {
+        #inverse-3 {
             display: none;
         }
-        #clock-1 {
+        #wiener-1 {
             display: none;
         }
-        #clock {
+        #wiener {
             margin: 1vw;
             border-radius: 2vw;
         }
-        #clock-image {
+        #wiener-image {
             display: none;
         }
-        #clock-3 {
+        #wiener-3 {
             display: none;
         }
-        #small-1 {
+        #post-1 {
             display: none;
         }
-        #small {
+        #post {
             margin: 1vw;
             border-radius: 2vw;
         }
-        #small-image {
+        #post-image {
             display: none;
         }
         #footer {
@@ -635,12 +757,12 @@ html {
             }
         }
     }
-    #sudoku {
+    #inverse {
         .inside-container {
-            #sudoku_head {
+            #inverse_head {
                 font-size: 12vw;
             }
-            #sudoku_text {
+            #inverse_text {
                 font-size: 4.5vw;
             }
             .read {
@@ -660,12 +782,12 @@ html {
             }
         }
     }
-    #clock {
+    #wiener {
         .inside-container {
-            #clock_head {
+            #wiener_head {
                 font-size: 12vw;
             }
-            #clock_text {
+            #wiener_text {
                 font-size: 4.5vw;
             }
             .read {
@@ -677,12 +799,12 @@ html {
             }
         }
     }
-    #small {
+    #post {
         .inside-container {
-            #small_head {
+            #post_head {
                 font-size: 12vw;
             }
-            #small_text {
+            #post_text {
                 font-size: 4.5vw;
             }
             .read {

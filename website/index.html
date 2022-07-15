@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Read The Text!</title>
+    <link rel="icon" href="Pictures/logo.svg" type="image/icon type">
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
@@ -13,16 +14,16 @@
     <div id="container">
         <div class="card child animate__animated animate__slideInDown" id="header">
             <p id="first">home page</p>
-            <a id="second" href="#sudoku"><p>first step</p></a>
-            <a id="third" href="#clock"><p>second step</p></a>
-            <a id="fourth" href="#small"><p>third step</p></a>
+            <a id="second" href="#inverse"><p>first step</p></a>
+            <a id="third" href="#wiener"><p>second step</p></a>
+            <a id="fourth" href="#tikhonov"><p>third step</p></a>
             <a id="fifth" href="#post"><p>fourth step</p></a>
         </div>
         <div class="card animate__animated animate__slideInLeft" id="home-1">
             <div class="inside-container">
                 <p class="hello">Read The Text!</p>
                 <p class="adam">Elisabeth Knipschildt, Ghada Laribi, Ricardo Carreon, Adam Varga</p>
-                <p class="greeting">The goal of this project it to deblur an image to
+                <p class="greeting">The goal of this project is to deblur an image to
                     an extent, where the text in the image conceiled by blurring and noise can be read.</p>
                 <div id="github">
                     <img src="pictures/github.svg" alt="GitHub logo">
@@ -37,66 +38,124 @@
         <div data-scroll class="image animate__animated animate__slideInRight" id="home-image">
             <img src="Pictures/blurred.png" alt="man leaning on table with a computer on it">
         </div>
-        <div class="card animate__animated animate__slideInRight" id="sudoku-1">
-            <a href="#sudoku"><img src="pictures/arrow_red_down.svg"></a>
+        <div class="card animate__animated animate__slideInRight" id="inverse-1">
+            <a href="#inverse"><img src="pictures/arrow_red_down.svg"></a>
         </div>
-        <div class="card child" id="sudoku">
+        <div class="card child" id="inverse">
             <div class="inside-container">
-                <p id="sudoku_head">Inverse filter</p>
-                <p id="sudoku_text">In order to recover a sharp image from the observed blurred one, several
+                <p id="inverse_head">Inverse filter</p>
+                <p id="inverse_text">In order to recover a sharp image from the observed blurred one, several
                     methods were tackled in literature. We start with basic naive inverse filter by first assuming
                     that the noise can be neglected thus the blur model is reduced to f = g * h.
                 </p>
-                <button class="read"onclick="window.location.href='sudoku.html';">Read More</button>
+                <button class="read"onclick="window.location.href=">Read More</button>
             </div>
         </div>
-        <div class="card" id="sudoku-3">
-            <a href="#sudoku"><img src="pictures/arrow_green_up.svg"></a>
+        <div class="card" id="inverse-3">
+            <a href="#inverse"><img src="pictures/arrow_green_up.svg"></a>
         </div>
-        <div data-scroll class="image" id="sudoku-image">
-            <img src="Pictures/deblurred_inverse.png" alt="sudoku board">
+        <div data-scroll class="image" id="inverse-image">
+            <img src="Pictures/deblurred_inverse.png" alt="inverse board">
         </div>
-        <div class="card" id="clock-1">
-            <a href="#clock"><img src="pictures/arrow_yellow_down.svg"></a>
+        <div class="card" id="wiener-1">
+            <a href="#wiener"><img src="pictures/arrow_yellow_down.svg"></a>
         </div>
-        <div class="card child" id="clock">
+        <div class="card child" id="wiener">
             <div class="inside-container">
-                <p id="clock_head">Wiener filter</p>
-                <p id="clock_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nulla rutrum nec leo eget dignissim. Nulla facilisi. Donec non metus in urna consectetur
-                    feugiat et et dolor.
+                <p id="wiener_head">Wiener filter</p>
+                <p id="wiener_text">Because of the noise present on the image, the naive solution is not sufficient.
+                    The Wiener filter displays better stability than the inverse filtering.
+                    It has properties of a band-pass and is therefore even well-suited to deal with moderate noise.
                 </p>
-                <button class="read"onclick="window.location.href='clock.html';">Read More</button>
+                <button class="read"onclick="window.location.href=">Read More</button>
             </div>
         </div>
-        <div class="card" id="clock-3">
-            <a href="#clock"><img src="pictures/arrow_blue_up.svg"></a>
+        <div class="card" id="wiener-3">
+            <a href="#wiener"><img src="pictures/arrow_blue_up.svg"></a>
         </div>
-        <div data-scroll class="image" id="clock-image">
-            <img src="Pictures/deblurred_wiener.png" alt="clock">
+        <div data-scroll class="image" id="wiener-image">
+            <img src="Pictures/deblurred_wiener.png" alt="wiener">
         </div>
-        <div class="card" id="small-1">
-            <a href="#small"><img src="pictures/arrow_green_down.svg"></a>
+
+
+        <div class="card animate__animated animate__slideInRight" id="tikhonov-1">
+            <a href="#tikhonov"><img src="pictures/arrow_green_down.svg"></a>
         </div>
-        <div class="card child" id="small">
+        <div class="card child" id="tikhonov">
             <div class="inside-container">
-                <p id="small_head">Tikhonov method</p>
-                <p id="small_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nulla rutrum nec leo eget dignissim. Nulla facilisi. Donec non metus in urna consectetur
-                    feugiat et et dolor.
+                <p id="tikhonov_head">Tikhonov method</p>
+                <p id="tikhonov_text">In 1963 Tikhonov proposed a more general variational method.
+                    The proposed method uses energy minimization to reduce the amount of noise in the image.
+                    Using this method, the edges were sharpened due to the use of the regularization function.
+                    Both the quote and the author’s name is clearer.
                 </p>
-                <button class="read"onclick="window.location.href='small_projects.html';">Read More</button>
+                <button class="read"onclick="window.location.href=">Read More</button>
             </div>
         </div>
-        <div data-scroll class="image" id="small-image">
-            <img src="" alt="man sitting in forest">
+        <div class="card" id="tikhonov-3">
+            <a href="#tikhonov"><img src="pictures/arrow_purple_up.svg"></a>
         </div>
-        <div class="card" id="footer"></div>
+        <div data-scroll class="image" id="tikhonov-image">
+            <img src="Pictures/deblurred_tikhonov_before_postprocess.png" alt="tikhonov board">
+        </div>
+
+
+        <div class="card" id="post-1">
+            <a href="#post"><img src="pictures/arrow_blue_down.svg"></a>
+        </div>
+        <div class="card child" id="post">
+            <div class="inside-container">
+                <p id="post_head">Post-processing</p>
+                <p id="post_text">Post-processing was utilized in the resulting image after appliying the Tikhonov method.
+                    This step is expected to enhance the filtered image. A sharpening filter was applied, and then
+                    thresholding to reduce the background noise, and the last step was the usage of the contrast
+                    limited adaptive histogram equalization.
+                </p>
+                <button class="read"onclick="window.location.href=">Read More</button>
+            </div>
+        </div>
+        <div data-scroll class="image" id="post-image">
+            <img src="Pictures/deblurred_tikhonov.png" alt="">
+        </div>
+        <div class="card" id="footer">
+            <a href="#header"><img src="pictures/arrow2_purple_up.svg"></a>
+        </div>
     </div>
     <script>
         ScrollOut({
             scrollingElement: "#container"
         });
+        var mydiv = document.getElementById("container");
+        if (mydiv.addEventListener) {
+            // IE9, Chrome, Safari, Opera
+            mydiv.addEventListener("mousewheel", MouseWheelHandler, false);
+            // Firefox
+            mydiv.addEventListener("DOMMouseScroll", MouseWheelHandler, false);
+        }
+        else 
+            mydiv.attachEvent("onmousewheel", MouseWheelHandler);
+
+
+        function MouseWheelHandler(e) {
+
+            // cross-browser wheel delta
+            var e = window.event || e; // old IE support
+            var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+
+            if(delta==1)         // if mouse scrolls up
+            {
+                e.preventDefault();
+                e.stopPropagation();
+                return false;  
+            }
+            if(delta==-1)        // if mouse scrolls down, we disable scrolling.
+            {
+                e.preventDefault();
+                e.stopPropagation();
+                return false;
+            }
+            return false;
+        }
     </script>
 </body>
 </html>
